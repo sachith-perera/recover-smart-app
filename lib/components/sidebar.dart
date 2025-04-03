@@ -42,11 +42,11 @@ class _SidebarState extends State<Sidebar> {
     setState(() {});
 
     try {
-      final fetchedUser = await fetchUser(_access_token!, baseUrl);
+      final fetchedUser = await fetchUser(_access_token, baseUrl);
       setState(() {
         user = fetchedUser;
         username = '${user!.firstName} ${user!.lastName}';
-        email = '${user!.email}';
+        email = user!.email;
         profileText = '${user!.firstName[0]}${user!.lastName[0]}';
       });
     } catch (e) {
