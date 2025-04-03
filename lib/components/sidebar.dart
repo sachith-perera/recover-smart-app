@@ -6,16 +6,22 @@ import 'dart:async';
 
 class Sidebar extends StatefulWidget {
   static int _selectedIndex = 0;
+
+  const Sidebar({super.key});
+
   @override
   State<Sidebar> createState() => _SidebarState();
+
+  // Sidebar(this._selectedIndex);
 }
 
 class _SidebarState extends State<Sidebar> {
   // int _selectedIndex = 0;
+
   String _path = '';
   User? user;
   String baseUrl = AuthService.baseUrl;
-  String? _access_token = AuthService.accessToken;
+  final String? _access_token = AuthService.accessToken;
 
   String? username = 'Loading...';
   String email = 'Loading...';
@@ -58,7 +64,8 @@ class _SidebarState extends State<Sidebar> {
       _path = switch (index) {
         0 => '/dashboard',
         1 => '/milestone',
-        2 => '/testpage',
+        2 => '/records',
+        3 => '/notes',
         _ => throw UnimplementedError(),
       };
 

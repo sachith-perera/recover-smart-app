@@ -68,7 +68,7 @@ class AppTheme {
           fontSize: 16,
           fontWeight: FontWeight.w400,
           letterSpacing: 0.5,
-          color: Color(0xFF191C20),
+          color: Color.fromARGB(255, 0, 0, 0),
         ),
         bodyMedium: TextStyle(
           fontSize: 14,

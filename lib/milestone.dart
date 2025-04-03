@@ -137,6 +137,7 @@ class _MiletoneState extends State<Milestone> {
                     style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
                   ),
                 ],
@@ -146,16 +147,20 @@ class _MiletoneState extends State<Milestone> {
                 style: const TextStyle(
                   fontSize: 16.0,
                   fontWeight: FontWeight.normal,
+                  color: Colors.white,
                 ),
               ),
               const SizedBox(height: 20),
+              Text(
+                'Progress: ${(_progressValue * 100).toStringAsFixed(0)}%',
+                style: TextStyle(color: Colors.white),
+              ),
               LinearProgressIndicator(
                 color: Theme.of(context).shadowColor,
                 value: _progressValue,
                 minHeight: 20.0,
                 borderRadius: const BorderRadius.all(Radius.circular(10.0)),
               ),
-              Text('Progress: ${(_progressValue * 100).toStringAsFixed(0)}%'),
             ],
           ),
         ),

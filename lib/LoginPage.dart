@@ -3,7 +3,7 @@ import 'api/auth_service.dart';
 
 // ignore: must_be_immutable
 class LoginPage extends StatefulWidget {
-  LoginPage({super.key});
+  const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -33,6 +33,9 @@ class _LoginPageState extends State<LoginPage> {
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ),
+
+              Image.asset('assets/appicon.png', height: 120, width: 120),
+              const SizedBox(height: 16),
               Container(
                 padding: EdgeInsets.all(16),
                 child: Text(

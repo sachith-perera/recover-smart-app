@@ -7,7 +7,7 @@ import 'api/user_details.dart';
 import 'api/get_milestones.dart'; // Make sure the import path is correct
 
 class Dashboard extends StatefulWidget {
-  const Dashboard({Key? key}) : super(key: key);
+  const Dashboard({super.key});
 
   @override
   State<Dashboard> createState() => _DashboardState();
@@ -181,6 +181,8 @@ class _DashboardState extends State<Dashboard> {
 
   @override
   Widget build(BuildContext context) {
+    // final textTheme = Theme.of(context).textTheme.displayLarge;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Dashboard"),
@@ -254,6 +256,7 @@ class _DashboardState extends State<Dashboard> {
                                         style: TextStyle(
                                           fontSize: 20.0,
                                           fontWeight: FontWeight.bold,
+                                          color: Colors.white,
                                         ),
                                       ),
                                       Text(
@@ -261,6 +264,7 @@ class _DashboardState extends State<Dashboard> {
                                         style: const TextStyle(
                                           fontSize: 16.0,
                                           fontWeight: FontWeight.normal,
+                                          color: Colors.white,
                                         ),
                                       ),
                                       if (_overdueMilestones != null &&
@@ -284,10 +288,17 @@ class _DashboardState extends State<Dashboard> {
                                   children: [
                                     Text(
                                       _progressStatus(_progressValue),
-                                      style: TextStyle(fontSize: 16.0),
+                                      style: TextStyle(
+                                        fontSize: 16.0,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                     Text(
                                       ' ${(_progressValue * 100).toStringAsFixed(0)}%',
+                                      style: TextStyle(
+                                        fontSize: 16.0,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ],
                                 ),
